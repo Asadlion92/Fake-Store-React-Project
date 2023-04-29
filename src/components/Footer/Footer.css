@@ -1,0 +1,16 @@
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: #3A4895;
+    color: white;
+    padding: 0 20px;
+}
+
+.footer-left-content {
+    display: flex;
+    align-items: center;
+    width: 180px;
+    justify-content: space-evenly;
+}
