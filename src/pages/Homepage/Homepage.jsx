@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import './Homepage.css'
 import axios from 'axios'
+import ProductCard from '../../components/ProductCard/ProductCard'
 
 //API Below
 
@@ -10,17 +11,16 @@ import axios from 'axios'
 function Homepage() {
 
   //Create state to store items
-  const[items, setItems] = useState([])
+  const[products, setProducts] = useState([])
 
   //I need to make an API call when the page loads
   useEffect(
     ()=>{
-      console.log("Homepage has loaded")
       //use axios to make API call
       axios.get(`https://fakestoreapi.com/products`).then(res=>{
         console.log(res.data)
         //store into state
-        setItems(res.data)
+        setProducts(res.data)
       }).catch(err => console.log(err))
     }, []
   )
@@ -36,7 +36,9 @@ function Homepage() {
       </nav>
       <div className='items-container'>
         {
-          items.map((item, index)=><p key={index}>{item.title}</p>)
+          products.map((item, index)=><ProductCard key={index} product={item} />)
+
+          /* products.map((item, index)=><p key={index}>{item.title}</p>) */
         }
       </div>
     </div>

@@ -10,3 +10,9 @@ nav button {
     color: #3A4895;
     cursor: pointer;
 }
+
+.items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
