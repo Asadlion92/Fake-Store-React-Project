@@ -1,0 +1,12 @@
+.home-container {
+    min-height: 100vh;
+    padding: 0 80px;
+}
+
+nav button {
+    margin-left: 20px;
+    border: none;
+    background-color: transparent;
+    color: #3A4895;
+    cursor: pointer;
+}

@@ -8,6 +8,11 @@
     padding: 0 20px;
 }
 
+.footer-container a {
+    text-decoration: none;
+    color: white;
+}
+
 .footer-left-content {
     display: flex;
     align-items: center;
