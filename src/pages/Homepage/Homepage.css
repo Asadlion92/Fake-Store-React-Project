@@ -11,6 +11,10 @@ nav button {
     cursor: pointer;
 }
 
+nav {
+    margin-left: 100px;
+}
+
 .items-container {
     display: flex;
     flex-wrap: wrap;

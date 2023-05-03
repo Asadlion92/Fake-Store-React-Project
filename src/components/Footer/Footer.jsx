@@ -10,7 +10,7 @@ function Footer() {
         <AiFillHeart />
         <p>by mimo</p>
       </div>
-      <a href='#'>Contact Us</a>
+      <a href='/contact'>Contact Us</a>
     </div>
   )
 }
