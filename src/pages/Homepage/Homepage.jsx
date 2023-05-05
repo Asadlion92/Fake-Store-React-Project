@@ -7,8 +7,6 @@ import ProductCard from '../../components/ProductCard/ProductCard'
 
 //https://fakestoreapi.com/docs
 
-
-
 function Homepage() {
 
   //Create state to store items
@@ -17,17 +15,12 @@ function Homepage() {
   //Create state to store filter buttons
   const[filterButtons, setFilterButtons] = useState([])
 
-  // //This Code below WORKS. Now I need to figure out how to store it in a website
-  // // const getName =(e)=> {
-  // //   let category = e.target.innerText;
-  // //   console.log(`https://fakestoreapi.com/products/category/${category}`)
-  // // }
-
   //This is the function that creates an api call for the buttons that we clicked
   const getName =(e)=> {
     let category = e.target.innerText;
     axios.get(`https://fakestoreapi.com/products/category/${category}`).then(res=>{
       console.log(res.data)
+      setProducts(res.data)//This allows the page to change once clicked
     }).catch(err => console.log(err))
   }
 
