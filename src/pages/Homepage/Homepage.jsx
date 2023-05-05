@@ -17,11 +17,25 @@ function Homepage() {
   //Create state to store filter buttons
   const[filterButtons, setFilterButtons] = useState([])
 
+  // //This Code below WORKS. Now I need to figure out how to store it in a website
+  // // const getName =(e)=> {
+  // //   let category = e.target.innerText;
+  // //   console.log(`https://fakestoreapi.com/products/category/${category}`)
+  // // }
+
+  //This is the function that creates an api call for the buttons that we clicked
+  const getName =(e)=> {
+    let category = e.target.innerText;
+    axios.get(`https://fakestoreapi.com/products/category/${category}`).then(res=>{
+      console.log(res.data)
+    }).catch(err => console.log(err))
+  }
+
   //I need to make an API call when the page loads
   useEffect(
     ()=>{
       //use axios to make API call
-      axios.get(`https://fakestoreapi.com/products`).then(res=>{
+      axios.get(`https://fakestoreapi.com/products/`).then(res=>{
         console.log(res.data)
         //store into state
         setProducts(res.data)
@@ -33,7 +47,6 @@ function Homepage() {
   useEffect(
     ()=>{
       axios.get('https://fakestoreapi.com/products/categories').then(res=>{
-        console.log(res.data)
         //store into state
         setFilterButtons(res.data)
       }).catch(err => console.log(err))
@@ -44,8 +57,7 @@ function Homepage() {
     <div className='home-container'>
 
       <nav>
-        {filterButtons.map((item, index)=> <button key={index}>{item.charAt(0).toUpperCase() + item.slice(1)}</button>)
-        /*The charAt(0) takes the first letter and make it capital. The slice(1) removes the first letter and keeps the rest of the letters. So captial first letter + the rest will give you a string with capital letter */
+        {filterButtons.map((item, index)=> <button key={index} onClick={getName}>{item}</button>)
         }
       </nav>
 
