@@ -13,6 +13,10 @@
     color: white;
 }
 
+.footer-container a:hover {
+    color: red;
+}
+
 .footer-left-content {
     display: flex;
     align-items: center;

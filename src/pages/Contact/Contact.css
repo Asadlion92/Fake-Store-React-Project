@@ -58,3 +58,7 @@ form button {
 form h1 {
     margin-top: 58px;
 }
+
+form button:hover {
+    color: red;
+}
