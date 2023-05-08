@@ -1,11 +1,12 @@
 import React from 'react'
 import './Header.css'
 import {AiOutlineShoppingCart} from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 
 function Header() {
   return (
     <div className='header-container'>
-      <a href='/'>Fake Store</a>
+      <Link to='/'>Fake Store</Link>
       <AiOutlineShoppingCart className='cart' />
     </div>
   )

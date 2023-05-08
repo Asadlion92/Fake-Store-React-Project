@@ -1,6 +1,7 @@
 import React from 'react'
 import './Footer.css'
 import {AiFillHeart} from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
@@ -8,9 +9,9 @@ function Footer() {
       <div className='footer-left-content'>
         <p>Made with</p>
         <AiFillHeart />
-        <p>by mimo</p>
+        <p>by Ja'far Asad</p>
       </div>
-      <a href='/contact'>Contact Us</a>
+      <Link to='/contact'>Contact Us</Link>
     </div>
   )
 }

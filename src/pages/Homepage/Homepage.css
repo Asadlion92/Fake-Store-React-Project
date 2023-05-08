@@ -11,6 +11,10 @@ nav button {
     cursor: pointer;
 }
 
+nav button:hover {
+    color: red;
+}
+
 nav {
     margin-left: 100px;
 }

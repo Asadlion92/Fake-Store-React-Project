@@ -24,6 +24,14 @@ function Homepage() {
     }).catch(err => console.log(err))
   }
 
+  //Get all items
+  const getAll = () => {
+    axios.get(`https://fakestoreapi.com/products/`).then(res=>{
+      console.log(res.data)
+      setProducts(res.data)//This allows the page to change once clicked
+    }).catch(err => console.log(err))
+  }
+
   //I need to make an API call when the page loads
   useEffect(
     ()=>{
@@ -50,6 +58,7 @@ function Homepage() {
     <div className='home-container'>
 
       <nav>
+        <button onClick={getAll}>All</button>
         {filterButtons.map((item, index)=> <button key={index} onClick={getName}>{item}</button>)
         }
       </nav>
