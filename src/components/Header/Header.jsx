@@ -7,7 +7,7 @@ function Header() {
   return (
     <div className='header-container'>
       <Link to='/'>Fake Store</Link>
-      <AiOutlineShoppingCart className='cart' />
+      <Link to='/checkout'><AiOutlineShoppingCart className='cart' /></Link>
     </div>
   )
 }
