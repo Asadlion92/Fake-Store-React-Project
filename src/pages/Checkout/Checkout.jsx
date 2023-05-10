@@ -13,7 +13,6 @@ function Checkout() {
 
   return (
     <div className='checkout-container'>
-      Checkout
       {
         //cart.map(item=><p>{item.title}</p>)
 

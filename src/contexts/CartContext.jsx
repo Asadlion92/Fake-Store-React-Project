@@ -9,28 +9,19 @@ export default function CartContextProvider(props) {
     const [cart, setCart] = useState([])
 
 
-    //check local storage for initial state of darkMode when context loads
-    // useEffect(
-    //     ()=>{
-    //         //console.log("context loaded")
-    //         //is there a value in local storage
-    //         const storedDarkMode = localStorage.getItem('darkMode')
-    //         //console.log("value is", storedDarkMode)
-    //         if (storedDarkMode !== null){
-    //             setDarkMode(JSON.parse(storedDarkMode))
-    //         }
-    //         //otherwise it uses the default value
-    //     }, []
-    // )
-
-    //save darkMode state anytime it changes
-    // useEffect(
-    //     ()=>{
-    //         //console.log('darkmode toggled')
-    //         //save current value to local storage
-    //         localStorage.setItem('darkMode', JSON.stringify(darkMode))
-    //     }, [darkMode] //runs when darkMode changes
-    // )
+    // check local storage for initial state of favoriteItems when context loads
+    useEffect(
+        ()=>{
+            //console.log("context loaded")
+            //is there a value in local storage
+            const storedItems = localStorage.getItem('favoriteItems')
+            if (storedItems){
+                setCart(JSON.parse(storedItems))
+                //To undo the Stringify, we have to Parse
+            }
+            //otherwise it uses the default value
+        }, []
+    )
 
     //This function will be use to add items to my cart
     const addItem = (itemToAdd) => {
@@ -40,6 +31,8 @@ export default function CartContextProvider(props) {
         // console.log(newItems)
         //update the state
         setCart(newItems)
+        //update local storage
+        localStorage.setItem('favoriteItems', JSON.stringify(newItems))
     }
 
     const removeItem = (itemId) => {
@@ -48,6 +41,8 @@ export default function CartContextProvider(props) {
         let newItems = cart.filter(item=> item.id !== itemId)
         //update the state
         setCart(newItems)
+        //update local storage
+        localStorage.setItem('favoriteItems', JSON.stringify(newItems))
     }
 
     return(
