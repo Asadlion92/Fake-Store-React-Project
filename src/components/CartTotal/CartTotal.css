@@ -1,0 +1,6 @@
+.total-container {
+    display: flex;
+    width: 80%;
+    background-color: aqua;
+    justify-content: flex-end;
+}

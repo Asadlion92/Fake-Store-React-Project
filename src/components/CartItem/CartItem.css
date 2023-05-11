@@ -1,0 +1,20 @@
+.cart-item-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    border-bottom: 2px solid #D9D9D999;
+}
+
+.cart-item-container img {
+    width: 180px;
+    height: auto;
+}
+
+.trash-can {
+    font-size: 40px;
+}
+
+.cart-item-container h3 {
+    width: 300px;
+}

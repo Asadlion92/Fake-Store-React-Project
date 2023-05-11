@@ -1,0 +1,23 @@
+.checkout-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 60px;
+    color: #979797;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #D9D9D999;
+}
+
+.checkout-header-right-content {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.checkout-header-left-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}

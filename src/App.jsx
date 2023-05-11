@@ -8,6 +8,7 @@ import Contact from './pages/Contact/Contact'
 import ProductDetails from './pages/ProductDetails/ProductDetails'
 import Checkout from './pages/Checkout/Checkout'
 import CartContextProvider from './contexts/CartContext'
+import CartItem from './components/CartItem/CartItem'
 
 
 //NEED TO REVIEW WEEK 4 WEDNESDAY EVENING CLASS, STOPPED AT 29:00
@@ -25,6 +26,7 @@ function App() {
             <Route path='/' element={<Homepage />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/checkout' element={<Checkout />} />
+            <Route path='/cart-item' element={<CartItem />} />
             <Route path='/product-details/:productId' element={<ProductDetails />} />
           </Routes>
 
