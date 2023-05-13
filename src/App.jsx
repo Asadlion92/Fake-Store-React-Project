@@ -11,7 +11,6 @@ import CartContextProvider from './contexts/CartContext'
 import CartItem from './components/CartItem/CartItem'
 
 
-//NEED TO REVIEW WEEK 4 WEDNESDAY EVENING CLASS, STOPPED AT 29:00
 
 function App() {
   // const [count, setCount] = useState(0)

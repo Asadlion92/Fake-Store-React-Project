@@ -13,6 +13,7 @@
 
 .trash-can {
     font-size: 40px;
+    cursor: pointer;
 }
 
 .cart-item-container h3 {
