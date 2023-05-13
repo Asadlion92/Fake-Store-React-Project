@@ -10,3 +10,54 @@
     margin-top: 40px;
     margin-bottom: 40px;
 }
+
+.btn-container {
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-container button {
+    height: 41px;
+    width: 156px;
+    border: none;
+    background-color: #FFD814;
+    color: black;
+    cursor: pointer;
+    margin-top: 60px;
+    font-size: 14px;
+}
+
+.btn-container button:hover {
+    color: red;
+}
+
+.modal {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+    text-align: center;
+}
+
+.modal-content button {
+    width: 156px;
+    height: 41px;
+    background-color: #5264C3;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    color: red;
+}
