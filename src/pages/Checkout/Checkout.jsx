@@ -18,7 +18,7 @@ function Checkout() {
 
   const clearAll = () => {
     () => setIsOpen(false);
-    // cart.length = 0
+    cart.length = 0
   }
 
   const customStyles = {
