@@ -16,6 +16,47 @@
     cursor: pointer;
 }
 
-.cart-item-container h3 {
+.left-content {
+    display: flex;
+    width: 500px;
+}
+
+.left-content h3 {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.right-content {
+    display: flex;
     width: 300px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@media (max-width: 480px) {
+    .left-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
+
+    .right-content {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 300px;
+        height: auto;
+    }
+
+    .cart-item-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left-content h3 {
+        width: 300px;
+    }
 }

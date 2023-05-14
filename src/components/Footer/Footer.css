@@ -17,9 +17,11 @@
     color: red;
 }
 
-.footer-left-content {
-    display: flex;
-    align-items: self-end;
-    width: 230px;
-    justify-content: space-evenly;
+
+@media (max-width: 480px) {
+    .footer-container {
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        height: 80px;
+    }
 }

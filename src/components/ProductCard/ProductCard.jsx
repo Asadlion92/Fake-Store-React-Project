@@ -31,7 +31,7 @@ function ProductCard({product}) {
 
   return (
     <div className='product-card'>
-        <div>
+        <div className='upper-content'>
           <img src={product.image} />
           {
             isFavorite?

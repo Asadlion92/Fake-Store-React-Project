@@ -17,10 +17,21 @@ nav button:hover {
 
 nav {
     margin-left: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .items-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+@media (max-width: 768px) {
+    nav {
+        justify-content: center;
+        margin-left: 0;
+    }
 }

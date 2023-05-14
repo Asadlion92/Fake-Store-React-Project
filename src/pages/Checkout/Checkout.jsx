@@ -16,6 +16,11 @@ function Checkout() {
 
   const [isOpen, setIsOpen] = useState(false)
 
+  const clearAll = () => {
+    () => setIsOpen(false);
+    // cart.length = 0
+  }
+
   const customStyles = {
     content: {
       top: '50%',
@@ -48,7 +53,7 @@ function Checkout() {
               <div className='modal-content'>
                 <p>Your Order was successful!</p>
                 <p>Check your email for the order confirmation. Thank you for shopping with Fake Store!</p>
-                <Link to='/'><button onClick={() => setIsOpen(false)}>Return to Main Page</button></Link>
+                <Link to='/'><button onClick={clearAll}>Return to Main Page</button></Link>
               </div>
             </div>
           </Modal>

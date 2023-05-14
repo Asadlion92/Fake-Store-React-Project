@@ -6,11 +6,7 @@ import { Link } from 'react-router-dom'
 function Footer() {
   return (
     <div className='footer-container'>
-      <div className='footer-left-content'>
-        <p>Made with</p>
-        <AiFillHeart />
-        <p>by Ja'far Asad</p>
-      </div>
+      <p>Made with <AiFillHeart /> by Ja'far Asad</p>
       <Link to='/contact'>Contact Us</Link>
     </div>
   )

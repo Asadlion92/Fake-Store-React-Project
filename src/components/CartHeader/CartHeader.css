@@ -12,12 +12,18 @@
 .checkout-header-right-content {
     display: flex;
     justify-content: space-between;
-    width: 30%;
+    width: 300px;
 }
 
 .checkout-header-left-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70%;
+    width: 500px;
+}
+
+@media (max-width: 480px) {
+    .checkout-header {
+        display: none;
+    }
 }

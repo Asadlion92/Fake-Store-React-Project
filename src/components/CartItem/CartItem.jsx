@@ -10,11 +10,15 @@ function CartItem({product}) {
 
   return (
     <div className='cart-item-container'>
+      <div className='left-content'>
         <img src={product.image} />
         <h3>{product.title}</h3>
+      </div>
+      <div className='right-content'>
         <p>${product.price}</p>
         <p>1</p>
         <BsTrash onClick={()=> removeItem(product.id)} className='trash-can' />
+      </div>
     </div>
   )
 }
