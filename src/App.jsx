@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Header from './components/Header/Header'
@@ -9,14 +8,15 @@ import ProductDetails from './pages/ProductDetails/ProductDetails'
 import Checkout from './pages/Checkout/Checkout'
 import CartContextProvider from './contexts/CartContext'
 import CartItem from './components/CartItem/CartItem'
+import ScrollToTop from './components/ScrollToTop'
 
 
 
 function App() {
-  // const [count, setCount] = useState(0)
 
   return (
     <BrowserRouter>
+    <ScrollToTop />
       <CartContextProvider>
         <div className="App">
           <Header />

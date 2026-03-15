@@ -12,13 +12,13 @@ function Checkout() {
 
   //use global state
   //NOTE {} not []
-  const {cart} = useContext(CartContext)
+  const {cart, clearCart} = useContext(CartContext)
 
   const [isOpen, setIsOpen] = useState(false)
 
   const clearAll = () => {
-    () => setIsOpen(false);
-    cart.length = 0
+    clearCart()
+    setIsOpen(false)
   }
 
   const customStyles = {

@@ -8,6 +8,11 @@ export default function CartContextProvider(props) {
     //Create the global state
     const [cart, setCart] = useState([])
 
+    const clearCart = () => {
+    setCart([])
+    localStorage.removeItem('favoriteItems')
+}
+
 
     // check local storage for initial state of favoriteItems when context loads
     useEffect(
@@ -46,7 +51,7 @@ export default function CartContextProvider(props) {
     }
 
     return(
-        <CartContext.Provider value={{cart, addItem, removeItem}}> {/*putting cart here is to let us know what it is that we need to make available in the other places*/}
+        <CartContext.Provider value={{cart, addItem, removeItem, clearCart}}> {/*putting cart here is to let us know what it is that we need to make available in the other places*/}
             {props.children}
         </CartContext.Provider>
     )
